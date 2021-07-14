@@ -1,15 +1,15 @@
 :root{
     --tipoletra: SweetPineapple;
     --colorverde: rgba(30, 185, 69, 0.5);
-    --CursorJuego: url(Assets/Cursores/BlueCGC.cur), auto;
-    --CursorNivel: url(Assets/Cursores/WhiteCGC.cur), auto;
+    --CursorJuego: url(../Assets/Cursores/BlueCGC.cur), auto;
+    --CursorNivel: url(../Assets/Cursores/WhiteCGC.cur), auto;
     --CardRadius: 12px;
 }
 
 @font-face {
     font-family:"SweetPineapple";
-    src: url("Assets/Fonts/sweetpineapple-webfont.woff") format("woff"), 
-    url("Assets/Fonts/sweetpineapple-webfont.woff2") format("woff2")
+    src: url("../Assets/Fonts/sweetpineapple-webfont.woff") format("woff"), 
+    url("../Assets/Fonts/sweetpineapple-webfont.woff2") format("woff2")
 }
 
 *{
@@ -19,7 +19,7 @@
 
 html{
     min-height: 100vh;
-    cursor: url(Assets/Cursores/BlueCGC.cur), auto;
+    cursor: url(../Assets/Cursores/BlueCGC.cur), auto;
 }
 
 body{
@@ -66,7 +66,7 @@ body{
 }
 
 .card:hover{
-    cursor: url(Assets/Cursores/WhiteCGC.cur), auto;
+    cursor: url(../Assets/Cursores/WhiteCGC.cur), auto;
 }
 
 .card.visible .card-atras{
