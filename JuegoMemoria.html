@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Memoria</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="JS/script.js" async></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="page-titulo">Juego Memoria</h1>
+    <h2 class="page-titulo"> Selecciona el NIVEL</h2>
+    <div class="overlay-text">
+        Click para Continuar
+        <h5 class="tinstrucciones">Instrucciones</h5>
+        <p class="instrucciones">1. Gira las cartas hasta encontrar su pareja antes de que finalice el tiempo</p>
+        <p class="instrucciones">2. Cuando todas las cartas hayan sido giradas tendras la victoria </p>
+        <p class="instrucciones">3. Si el tiempo finaliza antes de girar todas las cartas, perderás</p>
+    </div>
+
+    <div class="lvl-container-index" >
+        <input class="btn-lvl btn-index" id="btn1" type="button" value="NIVEL 1" onClick="lvl1()">
+        <input class="btn-lvl btn-index" id="btn2" type="button" value="NIVEL 2" onClick="lvl2()">
+        <input class="btn-lvl btn-index" id="btn3" type="button" value="NIVEL 3" onClick="lvl3()">  
+    </div>
+
+
+
+</body>
+
+</html>

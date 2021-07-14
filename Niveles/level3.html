@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Memoria</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../JS/script.js" async></script>
+</head>
+
+<body>
+    <h1 class="page-titulo">Juego de Memoria</h1>
+    <div class="overlay-text visible">
+        Click para Empezar
+        <h5 class="tinstrucciones">Instrucciones</h5>
+        <p class="instrucciones">1. Gira las cartas hasta encontrar su pareja antes de que finalice el tiempo</p>
+        <p class="instrucciones">2. Cuando todas las cartas hayan sido giradas tendras la victoria </p>
+        <p class="instrucciones">3. Si el tiempo finaliza antes de girar todas las cartas, perderás</p>
+        
+
+    </div>
+
+    <div id="juego-terminado-texto" class="overlay-text">
+        Juego Terminado
+        <span class="overlay-text-small">
+            Click para Reiniciar
+        </span>
+    </div>
+
+    <div id="victoria-texto" class="overlay-text">
+        ¡¡VICTORIA!!
+        <span class="overlay-text-small">
+            Click para Reiniciar
+        </span>
+    </div>
+
+    <div class="juego-container">
+        <div class="juego-info-container">
+            <div class="juego-info">
+                Tiempo <span id="tiempo-restante">100</span>
+            </div>
+
+            <div class="juego-info">
+                Giros <span id="giros">0</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/bear_animal.png" alt="">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/bear_animal.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/blowfish_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/blowfish_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/dog_animal.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/dog_animal.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/clownfish_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/clownfish_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/koala_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/koala_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/penguin_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/penguin_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/turtle_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/turtle_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/monkey_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-atras card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella" src="../Assets/Imagenes/Tarjeta/stars.png" alt="">
+            </div>
+            <div class="card-frente card-cara">
+                <img class="leaf leaf-top-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-top-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-left" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="leaf leaf-bottom-right" src="../Assets/Imagenes/Tarjeta/leaves.png" alt="">
+                <img class="estrella card-value" src="../Assets/Imagenes/ParesAnimales/monkey_animal.png"
+                    alt="">
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    <input class="btn-lvl volver" type="button" value="VOLVER" onclick="lvlJuego()">
+
+
+</body>
+
+</html>

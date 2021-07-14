@@ -1,0 +1,31 @@
+-- Audio
+Musica Niño 
+https://www.youtube.com/watch?v=3tzi14_FmGA&list=PLo3rXxvVR8Za_JAP8H3HCk_o1idgfROn5&index=3
+
+-- Cursores
+Cursores Colores
+
+-- Fonts (Woff Fonts) https://medialoot.com/free-fonts/2/
+Font Chalky
+Font Sweet
+Font Peeble
+Font Gardene
+
+-- Imagenes
+-Pares Animales
+1. Penguin
+2. Monkey
+3. Turtle
+4. Dog
+5. Bear
+6. Clownish
+7. Snail
+8. Seahorse
+9. Koala
+10. Starfish
+11. BlowFish
+
+-Tarjeta
+1. Cuadro
+2. Imagen Central
+3. Imagenes esquinas
