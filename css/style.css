@@ -25,6 +25,7 @@ html{
 body{
     margin: 0;
     background: radial-gradient(#beb9b9, rgb(107, 214, 98));
+    zoom: 70%;
 }
 
 .page-titulo{
