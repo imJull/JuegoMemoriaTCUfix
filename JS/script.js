@@ -136,6 +136,10 @@ class JuegoMemoria{
         document.getElementById('juego-terminado-texto').classList.add('visible');
     }
 
+    restart(){
+        clearInterval(this.countDown);
+    }
+
     victory(){
         clearInterval(this.countDown);
         this.audioController.victory();

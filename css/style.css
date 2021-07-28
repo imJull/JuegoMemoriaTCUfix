@@ -24,12 +24,15 @@ html{
 
 body{
     margin: 0;
-    background: radial-gradient(#beb9b9, rgb(107, 214, 98));
-    zoom: 70%;
+    background: #3ba07d93;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93F9B9, #1d976c93);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93F9B9, #1d976c91); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    zoom: 80%;
 }
 
 .page-titulo{
-    color:#27f30c;
+    color:#31a821;
     font-family: var(--tipoletra), serif;
     font-weight: 900;
     text-align: center;
@@ -44,8 +47,10 @@ body{
 
 .juego-info{
     font-family: var(--tipoletra), serif;
-    color:#30b41e;
+    color:#27a117;
     font-size: 50px;
+
+
 }
 
 .juego-container{
@@ -55,6 +60,7 @@ body{
     margin: 50px;
     justify-content: center;
     perspective: 500px;
+    zoom: 90%;
 }
 
 .card{
